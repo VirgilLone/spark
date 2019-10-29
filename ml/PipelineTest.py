@@ -5,6 +5,9 @@ from pyspark.ml import Pipeline
 from pyspark.ml.classification import LogisticRegression
 from pyspark.ml.feature import HashingTF, Tokenizer
 
+'''
+创建机器学习流水线，预测dataframe数据某列是否包含spark字符串
+'''
 spark = SparkSession.builder.master("local").appName("wordCount").getOrCreate()
 
 training = spark.createDataFrame([
